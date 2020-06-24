@@ -8,7 +8,7 @@ const yardım = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Yardım Menüsü")
  .setTimestamp()
-.setDescription("!eğlence = Eğlence Komutlarını Gösterir \n !moderasyon = Moderasyon Komutlarını Gösterir \n !kullanıcı = Oyun Komutlarını Gösterir.")
+.setDescription("!eğlence = Eğlence Komutlarını Gösterir \n !moderasyon = Moderasyon Komutlarını Gösterir \n !kullanıcı = Kullanıcı Komutlarını Gösterir.")
 message.channel.send(yardım)
 }
 
