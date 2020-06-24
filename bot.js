@@ -1,6 +1,7 @@
 const fs=require('fs');
 const Discord=require("discord.js");
 const client=new Discord.Client();
+const db = require('quick.db')
 const moment = require("moment");
 const ayarlar=require("./ayarlar.json");
 const express = require('express');
@@ -125,5 +126,51 @@ client.yetkiler = message => {
   if(message.author.id === ayarlar.sahip) permlvl = 7;
   return permlvl;
 };
+
+
+
+client.on("message", async msg => {
+    if(msg.author.bot) return;
+    
+    let i = await db.fetch(`reklamFiltre_${msg.guild.id}`)  
+          if (i == 'acik') {
+              const reklam = ["https://","http://","discord.gg"];
+              if (reklam.some(word => msg.content.toLowerCase().includes(word))) {
+                try {
+                  if (!msg.member.hasPermission("MANAGE_GUILD")) {
+                    msg.delete();                                       
+                    return msg.channel.send(`${msg.author.tag}, Reklam Yapmak Yasak!`).then(msg => msg.delete(10000));
+                  }              
+                } catch(err) {
+                  console.log(err);
+                }
+              }
+          }
+          if (!i) return;
+          });    
+
+
+client.on("messageUpdate", msg => {
+ 
+ 
+ const i = db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", "amk", "ananı sikiyim","piç","orospu çocuğu","orospu","oruspu"];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                         
+                      return msg.reply('Bu Sunucuda Küfür Filtresi Aktiftir.').then(msg => msg.delete(3000));
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    if (!i) return;
+});
+ 
+
 
 client.login(ayarlar.token)
