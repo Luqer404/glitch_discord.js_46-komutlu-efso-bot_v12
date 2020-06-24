@@ -15,6 +15,8 @@
     "common-tags": "^1.8.0",
     "moment-duration-format": "^2.2.2",
     "generate-password": "^1.5.0",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "request": "^2.88.2",
+    "chalk": "^4.1.0"
   }
 }
