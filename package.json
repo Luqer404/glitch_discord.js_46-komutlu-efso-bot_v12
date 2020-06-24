@@ -12,6 +12,8 @@
     "express": "^4.17.1",
     "moment": "^2.27.0",
     "jimp": "^0.13.0",
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.0",
+    "moment-duration-format": "^2.2.2",
+    "generate-password": "^1.5.0"
   }
 }

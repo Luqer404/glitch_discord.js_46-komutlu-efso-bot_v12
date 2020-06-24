@@ -2,8 +2,10 @@ dependencies:
   common-tags: 1.8.0
   discord.js: 12.2.0
   express: 4.17.1
+  generate-password: 1.5.1
   jimp: 0.13.0
   moment: 2.27.0
+  moment-duration-format: 2.3.2
   quick.db: 7.1.1
 packages:
   /@babel/runtime/7.10.3:
@@ -816,6 +818,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-LANAXHU4w51+s3sxcCLjJfsBi/c=
+  /generate-password/1.5.1:
+    dev: false
+    resolution:
+      integrity: sha512-XdsyfiF4mKoOEuzA44w9jSNav50zOurdWOV3V8DbA7SJIxR3Xm9ob14HKYTnMQOPX3ylqiJMnQF0wEa8gXZIMw==
   /gifwrap/0.9.2:
     dependencies:
       image-q: 1.1.1
@@ -1036,6 +1042,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
+  /moment-duration-format/2.3.2:
+    dev: false
+    resolution:
+      integrity: sha512-cBMXjSW+fjOb4tyaVHuaVE/A5TqkukDWiOfxxAjY+PEqmmBQlLwn+8OzwPiG3brouXKY5Un4pBjAeB6UToXHaQ==
   /moment/2.27.0:
     dev: false
     resolution:
@@ -1588,6 +1598,8 @@ specifiers:
   common-tags: ^1.8.0
   discord.js: ^12.2.0
   express: ^4.17.1
+  generate-password: ^1.5.0
   jimp: ^0.13.0
   moment: ^2.27.0
+  moment-duration-format: ^2.2.2
   quick.db: ^7.1.1
