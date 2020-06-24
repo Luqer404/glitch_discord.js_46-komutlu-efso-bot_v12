@@ -12,12 +12,12 @@ exports.run = async (client, message, args) => {
     } else {
         user = message.author;
     }
-    
-    const avatar = new Discord.RichEmbed()
+
+ const avatar = new Discord.MessageEmbed()
         .setColor("RANDOM")
        .setAuthor("» Buyur Avatarın,")
-        .setImage(user.avatarURL)
-    message.channel.sendEmbed(avatar)
+        .setImage(user.avatarURL())
+    message.channel.send(avatar)
     
 };
 
@@ -32,4 +32,5 @@ exports.help = {
   name: 'avatar',
   category: 'kullanıcı',
   description: 'Belirtilen Kişinin veya Komutu Yazan Kişinin Avatarını Atar.',
-   usage:''
+   usage:'!avatar <@kişi-etiket> veya !avatar'
+}

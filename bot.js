@@ -1,6 +1,7 @@
 const fs=require('fs');
 const Discord=require("discord.js");
 const client=new Discord.Client();
+const moment = require("moment");
 const ayarlar=require("./ayarlar.json");
 const express = require('express');
 /////
@@ -39,8 +40,8 @@ client.on("ready", () => {
 
 
 const log = message => {
-  console.log("message")
-}
+  console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
+};
 
 
 client.commands = new Discord.Collection();
