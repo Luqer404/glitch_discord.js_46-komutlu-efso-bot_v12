@@ -7,6 +7,7 @@ dependencies:
   moment: 2.27.0
   moment-duration-format: 2.3.2
   quick.db: 7.1.1
+  snekfetch: 4.0.4
 packages:
   /@babel/runtime/7.10.3:
     dependencies:
@@ -1377,6 +1378,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
+  /snekfetch/4.0.4:
+    deprecated: use node-fetch instead
+    dev: false
+    resolution:
+      integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
   /statuses/1.5.0:
     dev: false
     engines:
@@ -1603,3 +1609,4 @@ specifiers:
   moment: ^2.27.0
   moment-duration-format: ^2.2.2
   quick.db: ^7.1.1
+  snekfetch: ^4.0.4

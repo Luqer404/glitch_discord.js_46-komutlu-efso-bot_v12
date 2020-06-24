@@ -8,7 +8,7 @@ const mod = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Moderasyon Komutları")
  .setTimestamp()
-.setDescription("!ban = Birisine ban atarsınız \n !kick = Birisine kick atarsınız. \n !duyuru = Duyuru Yaparsınız \n !küfür = Küfür engel \n !reklam = Reklam engel \n !yetkilerim = Yetkilerini görürsün.")
+.setDescription("!ban = Birisine ban atarsınız \n !kick = Birisine kick atarsınız. \n !duyuru = Duyuru Yaparsınız \n !küfür = Küfür engel \n !reklam = Reklam engel.")
 message.channel.send(mod)
 }
 
