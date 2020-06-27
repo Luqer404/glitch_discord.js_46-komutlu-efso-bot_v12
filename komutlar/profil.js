@@ -26,7 +26,7 @@ exports.run = function (client, message, args) {
   
   var Durum = message.author.presence.status;
         var Durm = (Durum == "online" ? (0x00AE86) : (Durum == "offline" ? (0x808080) : (Durum == "idle" ? (0xFFFF00) : (Durum == "dnd" ? (0xFF0000) : (0x00AE86)))))
-        var durm = (Durum == "online" ? ("Çevrimiçi <:online:660482828286558218>") : (Durum == "offline" ? ("Çevrimdışı <:of:660482842282688532>") : (Durum == "idle" ? ("Boşta <:ay:660482859819335710>") : (Durum == "dnd" ? ("Rahatsız Etmeyin <:dnd:660482851275407372>") : ("Bilinmiyor/bulunamadı.")))))
+        var durm = (Durum == "online" ? ("Çevrimiçi ") : (Durum == "offline" ? ("Çevrimdışı ") : (Durum == "idle" ? ("Boşta ") : (Durum == "dnd" ? ("Rahatsız Etmeyin ") : ("Bilinmiyor/bulunamadı.")))))
   
   var üye = message.mentions.users.first();
   if (üye) {

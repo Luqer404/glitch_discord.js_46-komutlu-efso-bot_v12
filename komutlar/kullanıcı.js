@@ -8,7 +8,7 @@ const kullanıcı = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Kullanıcı Komutları")
  .setTimestamp()
-.setDescription("!avatar = Avatarınıza bakarsınız. \n !yetkilerim = Yetkilerini görürsün. ")
+.setDescription("!avatar = Avatarınıza bakarsınız. \n !yetkilerim = Yetkilerini görürsün. \n !profil = Profilini görürsün. ")
 message.channel.send(kullanıcı)
 }
 
