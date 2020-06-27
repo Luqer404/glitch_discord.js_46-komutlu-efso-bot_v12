@@ -20,7 +20,6 @@ message.channel.bulkDelete(args[0]).then(deletedMessages => {
 if (deletedMessages.size < 1) return message.reply("Hiç mesaj silemedim! _(**14** günden önceki mesajları silemem!)_");
 })
 message.channel.send(`**${args[0]}** adet mesaj başarıyla silindi!`)
-  message.delete({ timeout: 3000, reason: 'It had to be done.' });
 };
 
 exports.conf = {
