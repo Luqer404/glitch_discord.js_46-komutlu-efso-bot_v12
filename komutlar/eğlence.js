@@ -8,7 +8,7 @@ const eğlence = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Eğlence Komutları")
  .setTimestamp()
-.setDescription("!tersyazı = Bir Yazıyı Bot Ters Yazar \n !banner = Bot yazdığınız yazıyı banner olarak atar. \n !mcödül = Minecraft başarımı edinirsiniz. \n !fbi = Bot FBi Gif Atar. \n !token = Tokenimi Öğrenmek İstemezmisin? \n !düello = Düello Atarsın")
+.setDescription("!tersyazı = Bir Yazıyı Bot Ters Yazar \n !banner = Bot yazdığınız yazıyı banner olarak atar. \n !mcödül = Minecraft başarımı edinirsiniz. \n !fbi = Bot FBi Gif Atar. \n !token = Tokenimi Öğrenmek İstemezmisin? \n !düello = Düello Atarsın.")
 message.channel.send(eğlence)
 }
 
