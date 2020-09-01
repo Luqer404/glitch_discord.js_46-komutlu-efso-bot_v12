@@ -10,7 +10,7 @@ const yardım = new Discord.MessageEmbed()
 .setTitle("<a:hypesquad:742698007262396426> Destiny'in yardım menüsüne hoşgeldin! <a:hypesquad:742698007262396426>")
  .setTimestamp()
 .setDescription("<a:yan:750065080741134407> **!eğlence** = Eğlence komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!moderasyon** = Moderasyon komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!kullanıcı** = Kullanıcı komutlarını açarsınız. <a:developeremoji:749525084586115153> ")
-.setImage("https://cdn.discordapp.com/attachments/740182427426881538/750289660693184562/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
+.setImage("https://media.giphy.com/media/J2URvInBQo4ZjBslPe/giphy.gif")
 message.channel.send(yardım)
 }
 
