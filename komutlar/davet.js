@@ -4,8 +4,8 @@ exports.run = (client, message, args) => {
 
   const davet = new Discord.MessageEmbed()
   .setColor("RANDOM")
-  .setTitle("Beni Sunucuna Ekle")
-  .setDescription("[Davet Et](Bot Davet URL) \n [Destek Sunucusu](Bot Destek Sunucu URL)")
+  .setTitle("Beni Sunucuna Ekle ❤️")
+  .setDescription("[__**Davet Et**__](https://discord.com/api/oauth2/authorize?client_id=722377982773035020&permissions=8&scope=bot) \n [__**Destek Sunucusu**__](https://discord.gg/Pge4CXp)")
   message.channel.send(davet)
 }
 
