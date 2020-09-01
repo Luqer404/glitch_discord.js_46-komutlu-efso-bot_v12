@@ -6,10 +6,11 @@ exports.run = async (client, message, args) => {
 
 const kullanıcı = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setTitle("Kullanıcı Komutları")
+.setAuthor("Destiny v12 sürümüyle yeniden sizlerle.")
+.setTitle("<a:hypesquad:742698007262396426> Destiny Kullanıcı Komutları <a:hypesquad:742698007262396426>")
  .setTimestamp()
-.setDescription("!avatar = Avatarınıza bakarsınız. \n !yetkilerim = Yetkilerini görürsün. \n !profil = Profilini görürsün. \n !sunucuresmi = Sunucu resmini gösterir. \n !ping = Botun Pingine Bakarsın. \n !id = Birisinin İD Sine Bakarsın. \n !davet = Beni Sunucuna Ekle.")
-.setImage("https://cdn.discordapp.com/attachments/740182427426881538/750289660693184562/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
+.setDescription("<a:yan:750065080741134407> **!avatar** = Avatarınıza bakarsınız. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!yetkilerim** = Yetkilerini görürsün. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!profil** = Profilini görürsün. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!sunucuresmi** = Sunucu resmini gösterir. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!ping** = Botun Pingine Bakarsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!id** = Birisinin id'sine Bakarsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!davet** = Beni Sunucuna Ekle. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!botbilgi** = Bot istatistiklerini görürsünüz. <a:developeremoji:749525084586115153>")
+.setImage("https://media.giphy.com/media/W2Pi7elRIJ3HZmSnhm/giphy.gif")
 message.channel.send(kullanıcı)
 }
 

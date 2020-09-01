@@ -3,15 +3,15 @@ exports.run = async (client, message, args) => {
 
   
 let istek = args.slice(0).join(' ')
-if(!istek) return message.channel.send('Lütfen bir Bug Gırınız!')
+if(!istek) return message.channel.send('**Bug Bildirmek için Bir Bug Yazınız.** :x:')
 
 const embed = new Discord.MessageEmbed()
-.setTitle("İstek Kod")
+.setTitle("Destiny Bug Sistemi")
 .setColor('BLUE')
-.setDescription(`**Bug Kanal** ${message.channel.name} \n **Bug Bıldırılen Sunucu** \`${message.guild.name}\` \n **Bugu Bıldıren Kullanıcı** <@${message.author.id}> \n **Bug:** \`${istek}\``)
+.setDescription(`**Bug Kanalı** ${message.channel.name} \n **Bug Bildirilen Sunucu** \`${message.guild.name}\` \n **Bugu Bildiren Kullanıcı** <@${message.author.id}> \n **Bildirilen Bug :** \`${istek}\``)
 client.channels.cache.get('744536225230094360').send(embed)
   
-message.channel.send(" Bug bildiriminiz gönderildi.").then(message => message.delete({ timeout: 5000 }));
+message.channel.send("Bug bildiriminiz gönderildi. :white_check_mark:").then(message => message.delete({ timeout: 5000 }));
 };
 exports.conf = {
   enabled: true,
