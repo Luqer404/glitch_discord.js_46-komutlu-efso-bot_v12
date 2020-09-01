@@ -6,10 +6,11 @@ exports.run = async (client, message, args) => {
 
 const yardım = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setTitle("Destiny Yardım Menüsü")
+.setAuthor("Destiny Bot v12 Sürümüyle Yeniden Sizlerle.")
+.setTitle("Destiny'in yardım menüsüne hoşgeldin!")
  .setTimestamp()
-.setDescription("!eğlence = Eğlence komutlarını açarsınız. \n !moderasyon = komutlarını açarsınız. \n !kullanıcı = Kullanıcı komutlarını açarsınız.")
-.setImage("")
+.setDescription("**!eğlence** = Eğlence komutlarını açarsınız. \n **!moderasyon** = komutlarını açarsınız. \n **!kullanıcı** = Kullanıcı komutlarını açarsınız.")
+.setImage("https://cdn.discordapp.com/attachments/740182427426881538/750289660693184562/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
 message.channel.send(yardım)
 }
 

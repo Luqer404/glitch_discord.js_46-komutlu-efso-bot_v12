@@ -10,10 +10,9 @@ exports.run = (client, message, params) => {
     return message.author.send(ozelmesajuyari); }
     if (message.channel.type !== 'dm') {
       const embed = new Discord.MessageEmbed()
-    .setAuthor(message.author.username + ' Buyur Tokenin')
+    .setAuthor(message.author.username + ' Kanka sana tokenimi vereceğime gerçekten inandın mı \nGerçekten inandıysan helal olsun.')
     .setColor("RANDOM")
     .setTimestamp()
-        .setImage(`https://www.muratkim.com/wp-content/uploads/2019/04/ek%C5%9Fi-s%C3%B6zl%C3%BCk-yazar%C4%B1y%C4%B1m-buradakiler-beni-ele%C5%9Ftiremez_836814.gif`)
     return message.channel.send(embed);
     }
 };
