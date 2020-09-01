@@ -11,6 +11,7 @@ dependencies:
   quick.db: 7.1.1
   request: 2.88.2
   snekfetch: 4.0.4
+  weather.js: 0.1.0
 packages:
   /@babel/runtime/7.10.3:
     dependencies:
@@ -1868,6 +1869,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
+  /weather.js/0.1.0:
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha1-7Xji5ZaMW2B/+htnyln/0U5RJ7k=
   /which-pm-runs/1.0.0:
     dev: false
     resolution:
@@ -1945,3 +1952,4 @@ specifiers:
   quick.db: ^7.1.1
   request: ^2.88.2
   snekfetch: ^4.0.4
+  weather.js: ^0.1.0

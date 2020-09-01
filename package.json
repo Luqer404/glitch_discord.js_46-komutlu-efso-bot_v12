@@ -18,6 +18,7 @@
     "snekfetch": "^4.0.4",
     "request": "^2.88.2",
     "chalk": "^4.1.0",
-    "node-superfetch": "^0.1.10"
+    "node-superfetch": "^0.1.10",
+    "weather.js": "^0.1.0"
   }
 }
