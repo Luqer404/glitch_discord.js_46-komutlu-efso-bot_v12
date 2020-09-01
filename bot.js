@@ -155,7 +155,13 @@ client.on("messageUpdate", msg => {
  
  const i = db.fetch(`${msg.guild.id}.kufur`)
     if (i) {
-        const kufur = ["oç", "amk", "ananı sikiyim","piç","orospu çocuğu","orospu","oruspu"];
+        const kufur = ["oç", 
+                       "amk", 
+                       "ananı sik iyim",
+                       "piç",
+                       "orospu çocuğu",
+                       "orospu",
+                       "oruspu"];
         if (kufur.some(word => msg.content.includes(word))) {
           try {
             if (!msg.member.hasPermission("BAN_MEMBERS")) {
@@ -181,7 +187,8 @@ client.on("message", async msg => {
       if (msg.content.toLowerCase() == 'sa' || msg.content.toLowerCase() == 's.a' || msg.content.toLowerCase() == 'selamun aleyküm' || msg.content.toLowerCase() == 'sea'|| msg.content.toLowerCase() == 'selam') {
           try {
  
-                  return msg.reply('Aleyküm Selam, Hoşgeldin')
+                  return msg.reply(
+                    'Aleyküm Selam, Hoşgeldin')
           } catch(err) {
             console.log(err);
           }
