@@ -9,7 +9,7 @@ const yardım = new Discord.MessageEmbed()
 .setAuthor("Destiny Bot v12 Sürümüyle Yeniden Sizlerle.")
 .setTitle("<a:hypesquad:742698007262396426> Destiny'in yardım menüsüne hoşgeldin! <a:hypesquad:742698007262396426>")
  .setTimestamp()
-.setDescription("<a:yan:750065080741134407> **!eğlence** = Eğlence komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!moderasyon** = Moderasyon komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!kullanıcı** = Kullanıcı komutlarını açarsınız. <a:developeremoji:749525084586115153> ")
+.setDescription("<a:yan:750065080741134407> **!eğlence** = Eğlence komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!moderasyon** = Moderasyon komutlarını açarsınız. <a:developeremoji:749525084586115153>  \n <a:yan:750065080741134407> **!kullanıcı** = Kullanıcı komutlarını açarsınız. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **!müzik** = Müzik komutlarını açarsınız. <a:developeremoji:749525084586115153>")
 .setImage("https://media.giphy.com/media/W2Pi7elRIJ3HZmSnhm/giphy.gif")
 message.channel.send(yardım)
 }
