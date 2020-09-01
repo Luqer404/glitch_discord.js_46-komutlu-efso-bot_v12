@@ -6,9 +6,10 @@ exports.run = async (client, message, args) => {
 
 const yardım = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setTitle("Yardım Menüsü")
+.setTitle("Destiny Yardım Menüsü")
  .setTimestamp()
-.setDescription("!eğlence = Eğlence Komutlarını Gösterir \n !moderasyon = Moderasyon Komutlarını Gösterir \n !kullanıcı = Kullanıcı Komutlarını Gösterir.")
+.setDescription("!eğlence = Eğlence komutlarını açarsınız. \n !moderasyon = komutlarını açarsınız. \n !kullanıcı = Kullanıcı komutlarını açarsınız.")
+.setImage("")
 message.channel.send(yardım)
 }
 
