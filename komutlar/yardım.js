@@ -6,11 +6,11 @@ exports.run = async (client, message, args) => {
 
 const yardım = new Discord.MessageEmbed()
 .setColor("BLUE")
-.setAuthor("Destiny Bot v12 Sürümüyle Yeniden Sizlerle.")
-.setTitle("<a:hypesquad:742698007262396426> Destiny'in yardım menüsüne hoşgeldin! <a:hypesquad:742698007262396426>")
+.setAuthor("Destiny v12 sürümüyle yeniden sizlerle.")
+.setTitle("<a:Yldz:742698148329291826> Destiny'in yardım menüsüne hoşgeldin! <a:Yldz:742698148329291826>")
  .setTimestamp()
 .setDescription("<a:destinyhype:751090021859196968> **!eğlence** = __Eğlence komutlarını görüntülersiniz.__ \n <a:ayarlardestiny:751089592245158030> **!moderasyon** = __Moderasyon komutlarını görüntülersiniz.__ \n <a:partnerdestiny:751089594694631465> **!kullanıcı** = __Kullanıcı komutlarını görüntülersiniz.__")
-.setImage("https://cdn.discordapp.com/attachments/735861222791971016/751077508207607847/Destiny.gif")
+.setImage("https://media.giphy.com/media/PjCOJ0BjiGW5fJD3Wv/giphy.gif")
 message.channel.send(yardım)
 }
 
