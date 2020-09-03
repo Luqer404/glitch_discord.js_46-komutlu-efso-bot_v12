@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
   const yazi = args.slice(0).join('+'); 
 
-  if(!yazi) return message.channel.send(`Lütfen yazı yazın`)
+  if(!yazi) return message.channel.send(`**Lütfen yazı yazınız.** <a:Yldz:742698148329291826>`)
   const linqo = `https://dummyimage.com/2000x500/33363c/ffffff&text=${yazi}`
   .replace(' ', '+')
 

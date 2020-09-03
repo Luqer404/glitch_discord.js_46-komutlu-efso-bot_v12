@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
   const yazi = args.slice(0).join('+'); 
 
   if(!yazi) return message.channel.send(`**Lütfen yazı yazınız.** <a:Yldz:742698148329291826>`)
-  const linqo = `https://dynamic.brandcrowd.com/asset/logo/f802ad87-f5ae-491f-9a02-89ee701b588f/logo?v=4&text=${yazi}`
+  const linqo = `https://dummyimage.com/600x600/eb0949/000000&text=${yazi}`
   .replace(' ', '+')
 
   
@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   .setTitle("Logo")
   .setColor("RANDOM")
   .setImage(linqo)
-  .setFooter('Dinamik Logo Oluşturuldu')
+  .setFooter('Basit Logo Oluşturuldu')
   message.channel.send(embed)
 }
 exports.conf = {
@@ -23,7 +23,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'dinamik',
-    description: 'Yazdığınız yazıyı dinamik çevirir.',
-    usage: 'dinamik <yazı>'
+    name: 'basit',
+    description: 'Yazdığınız yazıyı bannera çevirir.',
+    usage: 'basit <yazı>'
 }
