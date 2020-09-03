@@ -10,7 +10,7 @@ const eğlence = new Discord.MessageEmbed()
 .setTitle("<a:hypesquad:742698007262396426> Destiny Eğlence Komutları <a:hypesquad:742698007262396426>")
  .setTimestamp()
 .setDescription("<a:yan:750065080741134407> **-tersyazı** = Bir Yazıyı Bot Ters Yazar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-banner** = Bot yazdığınız yazıyı banner olarak atar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-mcskin** = Yazdığınız ismin minecraft görünüşünü atar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-fbi** = Bot FBi Gif Atar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-token** = Tokenimi Öğrenmek İstemezmisin? <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-düello** = Düello Atarsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-wasted** = Polis tarafından yakalanırsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-atatürk** = Dene ve gör... (1881-1938) <a:developeremoji:749525084586115153>")
-.setImage("https://media.giphy.com/media/PjCOJ0BjiGW5fJD3Wv/giphy.gif")
+.setImage("https://cdn.discordapp.com/attachments/744536225230094360/751100899836821534/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
 message.channel.send(eğlence)
 }
 
