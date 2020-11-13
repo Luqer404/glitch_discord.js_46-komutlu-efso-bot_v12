@@ -35,12 +35,13 @@ client.on("message", message => {
 
 client.on("ready", () => {
   console.log(`Bütün komutlar başarıyla yüklendi!`);
-  client.user.setStatus("idle");
-  client.user.setActivity('p?yardım | p?davet');
+  client.user.setStatus("dnd");
+  client.user.setActivity('-yardım | -davet');
 })
 
+
 const log = message => {
-  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+  console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
 };
 
 
@@ -149,62 +150,35 @@ client.on("message", async msg => {
           });    
 
 
-//-------------------- Küfür Engel --------------------//
-
-client.on("message", async msg => {
-  const i = await db.fetch(`${msg.guild.id}.kufur`);
-  if (i) {
-    const kufur = [
-      "oç",
-      "amk",
-      "ananı sikiyim",
-      "ananıskm",
-      "piç",
-      "amk",
-      "amsk",
-      "sikim",
-      "sikiyim",
-      "orospu çocuğu",
-      "piç kurusu",
-      "kahpe",
-      "orospu",
-      "mal",
-      "sik",
-      "yarrak",
-      "am",
-      "amcık",
-      "amık",
-      "yarram",
-      "sikimi ye",
-      "mk",
-      "mq",
-      "aq",
-      "ak",
-      "amq"
-    ];
-    if (kufur.some(word => msg.content.includes(word))) {
-      try {
-        if (!msg.member.hasPermission("BAN_MEMBERS")) {
-          msg.delete();
-
-          const kinda = new Discord.MessageEmbed()
-
-            .setDescription("Bu Sunucuda Küfür Edemezsin.")
-            .setColor("BLACK");
-
-          return msg.reply(kinda);
+client.on("messageUpdate", msg => {
+ 
+ 
+ const i = db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", 
+                       "amk", 
+                       "ananı sik iyim",
+                       "piç",
+                       "orospu çocuğu",
+                       "orospu",
+                       "oruspu"];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                         
+                      return msg.reply('Bu Sunucuda Küfür Filtresi Aktiftir.').then(msg => msg.delete(3000));
+            }              
+          } catch(err) {
+            console.log(err);
+          }
         }
-      } catch (err) {
-        console.log(err);
-      }
     }
-  }//lrowsxrd
-  if (!i) return;
+    if (!i) return;
 });
-
  
 
-//-------------------- sa-as sistemi --------------------//
+
 client.on("message", async msg => {
  
  
@@ -228,160 +202,3 @@ client.on("message", async msg => {
     });
 
 client.login(ayarlar.token)
-
-//-------------------- Ever Here Engel --------------------//
-//-------------------- Ever Here Engel --------------------//
-//-------------------- Ever Here Engel --------------------//
-
-client.on("message", async msg => {
-  let hereengelle = await db.fetch(`hereengel_${msg.guild.id}`);
-  if (hereengelle == "acik") {
-    const here = ["@here", "@everyone"];
-    if (here.some(word => msg.content.toLowerCase().includes(word))) {
-      if (!msg.member.hasPermission("ADMINISTRATOR")) {
-        msg.delete();
-        msg.channel
-          .send(`<@${msg.author.id}>`)
-          .then(message => message.delete());
-        var e = new Discord.MessageEmbed()
-          .setColor("BLACK")
-          .setDescription(`Bu Sunucuda Everyone ve Here Yasak!`);
-        msg.channel.send(e);
-      }
-    }
-  } else if (hereengelle == "kapali") {
-  }//lrowsxrd
-});
-
-//-------------------- Seste Tutma --------------------////lrowsxrd//lrowsxrd
-
-client.on("ready", async function() {
-const voiceChannel = "764148347283308586"
-client.channels.cache.get(voiceChannel).join()
-.catch(err => {
-throw err;
-})
-})
-
-//-------------------- Sahibim Komutu --------------------////lrowsxrd//lrowsxrd
-client.on("message", async msg => {
-const request = require('node-superfetch');
-const db = require('quick.db');
-const ms = require('parse-ms')
-let timeout = 1200//süresini dilediğiniz gibi kısaltabilirsiniz.
-let cmf = await db.fetch(`codemarefi_${msg.author.id}`);
-let i = ayarlar.sahip
-          if (msg.author.id == i) {
-    if (cmf !== null && timeout - (Date.now() - cmf) > 0) {
-        let time = ms(timeout - (Date.now() - cmf));
-    } else {
-  if(msg.author.bot) return;   
-  if (msg.content.length > 1) {
-db.set(`codemarefi_${msg.author.id}`, Date.now());
-  var embed = new Discord.RichEmbed()
-  .setDescription(`:ready: İşte benim **sahibim**! <@${msg.author.id}>`)
-  .setColor("BLUE")
-   msg.channel.send(embed)
-  }
-};
-          }
-   else if (i == undefined) {           
-          }
-          if (!i) return;
-        
-});
-
-
-//-------------------- Reklam Engel --------------------////lrowsxrd//lrowsxrd
-
-client.on("message", async message => {
-  let uyarisayisi = await db.fetch(`reklamuyari_${message.author.id}`);
-  let reklamkick = await db.fetch(`kufur_${message.guild.id}`);
-  let kullanici = message.member;
-  if (!reklamkick) return;
-  if (reklamkick == "Açık") {
-    const reklam = [
-      "discord.app",
-      "discord.gg",
-      ".com",
-      ".net",
-      ".xyz",
-      ".tk",
-      ".pw",
-      ".io",
-      ".me",
-      ".gg",
-      "www.",
-      "https",
-      "http",
-      ".gl",
-      ".org",
-      ".com.tr",
-      ".biz",
-      ".party",
-      ".rf.gd",
-      ".az",
-      ".hub"
-    ];
-    if (reklam.some(word => message.content.toLowerCase().includes(word))) {
-      if (!message.member.hasPermission("BAN_MEMBERS")) {
-        message.delete();
-        db.add(`reklamuyari_${message.author.id}`, 1); //uyarı puanı ekleme
-        if (uyarisayisi === null) {
-          let uyari = new Discord.RichEmbed()
-            .setColor("BLACK")//lrowsxrd
-            .setTitle("lrowsxrd Reklam-Engel!")
-            .setDescription(
-              `<@${message.author.id}> Reklam Yapmayı Kes! Bu İlk Uyarın! (1/3)`
-            )
-            .setFooter(client.user.username, client.user.avatarURL)
-            .setTimestamp();
-          message.channel.send(uyari);
-        }
-        if (uyarisayisi === 1) {
-          let uyari = new Discord.RichEmbed()
-            .setColor("BLACK")
-            .setTitle("lrowsxrd Reklam-Engel!")
-            .setDescription(
-              `<@${message.author.id}> Reklam Yapmayı Kes! Bu İkinci Uyarın! (2/3)`
-            )
-            .setFooter(client.user.username, client.user.avatarURL)
-            .setTimestamp();
-          message.channel.send(uyari);
-        }
-        if (uyarisayisi === 2) {
-          message.delete();
-          await kullanici.kick({
-            reason: `Reklam-Engel Sistemi!`
-          });
-          let uyari = new Discord.RichEmbed()
-            .setColor("BLACK")
-            .setTitle("lrowsxrd Reklam-Engel!")
-            .setDescription(
-              `<@${message.author.id}> Reklam Yaptığı İçin Sunucudan Atıldı! (3/3)`
-            )
-            .setFooter(client.user.username, client.user.avatarURL)
-            .setTimestamp();
-          message.channel.send(uyari);
-        }
-        if (uyarisayisi === 3) {
-          message.delete();
-          await kullanici.ban({
-            reason: `lrowsxrd Reklam-Engel Sistemi!`
-          });
-          db.delete(`reklamuyari_${message.author.id}`);
-          let uyari = new Discord.RichEmbed()//lrowsxrd
-            .setColor("BLACK")
-            .setTitle("lrowsxrd Reklam Kick Sistemi")
-            .setDescription(
-              `<@${message.author.id}> Atıldıktan Sonra Tekrar Reklam Yaptığı İçin Sunucudan Yasaklandı!`
-            )
-            .setFooter(client.user.username, client.user.avatarURL)
-            .setTimestamp();
-          message.channel.send(uyari);
-        }
-      }
-    }
-  }
-});
-
