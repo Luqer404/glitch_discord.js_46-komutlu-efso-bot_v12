@@ -6,11 +6,11 @@ exports.run = async (client, message, args) => {
 
 const kullanıcı = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setAuthor("mays bot v12 sürümüyle yeniden sizlerle.")
-.setTitle(" Destiny Kullanıcı Komutları <")
+.setAuthor("Mays bot ")
+.setTitle(" ➤Mays Bot Kullanıcı Komutları ")
  .setTimestamp()
 .setDescription(" **m!avatar** = Avatarınıza bakarsınız.  \n  **m!yetkilerim** = Yetkilerini görürsün. \n  **m!profil** = Profilini görürsün.  \n **m!sunucuresmi** = Sunucu resmini gösterir.  \n  **m!ping** = Botun Pingine Bakarsın. \n **m!id** = Birisinin id'sine Bakarsın. \n  **m!davet** = Beni Sunucuna Ekle.  \n  **m!botbilgi** = Bot istatistiklerini görürsünüz. \n  **m!bug-bildir** = Yazdığınız bug'u yapımcılarıma bildirir. ")
-.setImage("https://cdn.discordapp.com/attachments/744536225230094360/751100899836821534/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
+.setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
 message.channel.send(kullanıcı)
 }
 
