@@ -9,7 +9,7 @@ const kullanıcı = new Discord.MessageEmbed()
 .setAuthor("mays bot v12 sürümüyle yeniden sizlerle.")
 .setTitle(" Destiny Kullanıcı Komutları <")
  .setTimestamp()
-.setDescription(" **m!avatar** = Avatarınıza bakarsınız.  \n  **m!yetkilerim** = Yetkilerini görürsün. \n  **m!profil** = Profilini görürsün.  \n <**m!sunucuresmi** = Sunucu resmini gösterir.  \n < **m!ping** = Botun Pingine Bakarsın. \n **m!id** = Birisinin id'sine Bakarsın. \n  **m!davet** = Beni Sunucuna Ekle.  \n  **m!botbilgi** = Bot istatistiklerini görürsünüz. \n  **m!bug-bildir** = Yazdığınız bug'u yapımcılarıma bildirir. ")
+.setDescription(" **m!avatar** = Avatarınıza bakarsınız.  \n  **m!yetkilerim** = Yetkilerini görürsün. \n  **m!profil** = Profilini görürsün.  \n **m!sunucuresmi** = Sunucu resmini gösterir.  \n  **m!ping** = Botun Pingine Bakarsın. \n **m!id** = Birisinin id'sine Bakarsın. \n  **m!davet** = Beni Sunucuna Ekle.  \n  **m!botbilgi** = Bot istatistiklerini görürsünüz. \n  **m!bug-bildir** = Yazdığınız bug'u yapımcılarıma bildirir. ")
 .setImage("https://cdn.discordapp.com/attachments/744536225230094360/751100899836821534/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
 message.channel.send(kullanıcı)
 }
