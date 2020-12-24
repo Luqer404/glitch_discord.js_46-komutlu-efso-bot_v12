@@ -7,9 +7,9 @@ exports.run = async (client, message, args) => {
 const eğlence = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setAuthor("Destiny v12 sürümüyle yeniden sizlerle.")
-.setTitle("<a:Yldz:742698148329291826> Destiny Eğlence Komutları <a:Yldz:742698148329291826>")
+.setTitle(" Destiny Eğlence Komutları ")
  .setTimestamp()
-.setDescription("<a:yan:750065080741134407> **-tersyazı** = Bir Yazıyı Bot Ters Yazar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-mcskin** = Yazdığınız ismin minecraft görünüşünü atar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-fbi** = Bot FBi Gif Atar. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-token** = Tokenimi Öğrenmek İstemezmisin? <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-düello** = Düello Atarsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-wasted** = Polis tarafından yakalanırsın. <a:developeremoji:749525084586115153> \n <a:yan:750065080741134407> **-atatürk** = Dene ve gör... (1881-1938) <a:developeremoji:749525084586115153>")
+.setDescription(" **m!tersyazı** = Bir Yazıyı Bot Ters Yazar. < \n  **m!mcskin** = Yazdığınız ismin minecraft görünüşünü atar.  \n  **m!fbi** = Bot FBi Gif Atar.  **m!token** = Tokenimi Öğrenmek İstemezmisin?  \n  **m!düello** = Düello Atarsın.  \n < **m!wasted** = Polis tarafından yakalanırsın.  \n  **m!atatürk** = Dene ve gör... (1881-1938) ")
 .setImage("https://cdn.discordapp.com/attachments/744536225230094360/751100899836821534/Night_Sky_Mountain_Decorative_Border_Youtube_Thumbnail.png")
 message.channel.send(eğlence)
 }

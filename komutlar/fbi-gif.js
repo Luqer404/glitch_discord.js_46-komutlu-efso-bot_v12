@@ -21,5 +21,5 @@ exports.conf = {
 exports.help = {
   name: "fbi",
   description: "FBi gif atar",
-  usage:"!fbi"
+  usage:"m!fbi"
 }
