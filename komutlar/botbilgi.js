@@ -1,66 +1,40 @@
-const codework3 = require("discord.js");
-const codework = require("moment");
-const codework2 = require("os");
+const Discord = require("discord.js");
+const moment = require("moment");
+const os = require("os");
 require("moment-duration-format");
-
 exports.run = async (client, message, args) => {
-  const CodeWork = new codework3.MessageEmbed()
-    .setColor("BLACK")
-    .setFooter(`Clyx © | Tüm hakları saklıdır.`)
-    .addField(
-      " **Bellek kullanımı**",
-      (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB",
-      true
-    )
-    .addField(
-      " **Botun Kuruluş Tarihi**",
-      "21.09.2020"
-    )
-    .addField(
-      " **Çalışma süresi**",
-      codework
-        .duration(client.uptime)
-        .format(" D [gün], H [saat], m [dakika], s [saniye]")
-    )
-    .addField(
-      "**Kullanıcılar**",
-      client.guilds.cache
-        .reduce((a, b) => a + b.memberCount, 0)
-        .toLocaleString(),
-      true
-    )
-    .addField(
-      " **Sunucular**",
-      client.guilds.cache.size.toLocaleString(),
-      true
-    )
-    .addField(
-      " **Kanallar**",
-      client.channels.cache.size.toLocaleString(),
-      true
-    )
-    .addField("**Discord.JS sürüm**", "v" + codework3.version, true)
-    .addField(" **Node.JS sürüm**", `${process.version}`, true)
-    .addField("**Ping**", client.ws.ping + " ms", true)
-    .addField(
-      "**CPU**",
-      `\`\`\`md\n${codework2.cpus().map((i) => `${i.model}`)[0]}\`\`\``
-    )
-    .addField(" **Bit**", `\`${codework2.arch()}\``, true)
-    .addField(" **İşletim Sistemi**", `\`\`${codework2.platform()}\`\``)
+  const payidarzaman = moment
 
-    
-  return message.channel.send(CodeWork);
+    .duration(client.uptime)
+    .format(" D [gün], H [saat], m [dakika], s [saniye]");
+  const istatistikler = new Discord.MessageEmbed()
+    .setColor("YELLOW")
+    .addField("**__Ping__**",`Mesaj Gecikmesi: ${new Date().getTime() - message.createdTimestamp} ms\n  Bot Gecikmesi: ${client.ws.ping}ms`, true)
+    .addField("**__Kullanıcı Sayısı__** ", `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`, true)
+    .addField("**__Sunucu Sayısı__**", `${client.guilds.cache.size.toLocaleString()}`, true)
+    .addField("**__Kanal Sayısı__**", `${client.channels.cache.size.toLocaleString()}`, true)
+    .addField("**__Aktiflik__**", `${payidarzaman}`, true)
+    .addField("**__Node.JS Versiyon__**", `${process.version}`, true)
+    .addField("**__Ram Kullanımı__**", `${(process.memoryUsage().heapUsed / 1024 / 512).toFixed(2) + " MB"}`, true)
+    .addField("**__Discord.JS__**", `${Discord.version}`, true)
+    .addField("**__Konum__**", `Turkey :flag_tr:`, true)
+    .addField("**__Bot Sahibi__**", `Murat Eren#4841`, true)
+    .addField("**__Geliştirici__**", ` Murat Eren#4841`, true)
+    .addField("**__İşletim Sistemi__**", ` \`Windows 10 | 64 Bit\` `, true)
+    .addField("**__CPU__**",` \`\`\`Intel(R) Xeon(R) CPU @ 2.30GHz\`\`\` `)
+
+  return message.channel.send(istatistikler);
 };
+
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["istatistik"],
+  aliases: ['is'],
   permLevel: 0
 };
+
 exports.help = {
-  name: 'istatistik',
-  
-  description: 'CodeWork V12 istatistik',
-  usage: 'istatistik'
+  name: "is",
+  description: "is",
+  usage: "is"
 };
