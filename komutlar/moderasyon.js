@@ -6,10 +6,10 @@ exports.run = async (client, message, args) => {
 
 const eğlence = new Discord.MessageEmbed()
 .setColor("RANDOM")
-.setAuthor("Mays v12 sürümüyle sizlerle")
+.setAuthor(" Mays v12 sürümüyle sizlerle")
 .setTitle(" ➤Mays Moderasyon komutları" )
  .setTimestamp()
-.setDescription(" m!ping \n m!forceban \n m!id \n m!küfür \n m!botbilgi \n m!kick \n m!sunucubilgi \n m!sil \n m!profil \n m!token \n m!yetkilerim")
+.setDescription(" **m!ping** \n **m!forceban** \n **m!id** \n **m!küfür** \n **m!botbilgi** \n **m!kick** \n **m!sunucubilgi** \n **m!sil** \n **m!profil** \n **m!token** \n **m!yetkilerim** \n  **m!üyedurum**\n **m!afk** \n **m!davet** ")
 .setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
 message.channel.send(eğlence)
 }

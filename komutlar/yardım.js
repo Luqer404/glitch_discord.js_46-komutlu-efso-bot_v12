@@ -17,16 +17,11 @@ exports.run = (client, message) => {
  
 :white_small_square: | **m!eğlence:** Eğlence Menüsüne Bakarsınız.
 :white_small_square: | **m!moderasyon:** Botun Moderasyon Komutlarına Bakarsınız
-:white_small_square: | **m!moderasyon2:** Botun 2. Moderasyon Komutlarına Bakarsınız.
 :white_small_square: | **m!logomenü:** Botun Logo YAPMA Komutlarına Bakarsınız. 
 
 `)
 
 
-    .addField(
-      ":boom:➤ Yardım & Hata & Bug  \n",
-      ":white_small_square: | **m!hatabildir:** "
-    )
 
     .addField(
       ` :boom: Bilgilendirme`,
@@ -37,7 +32,7 @@ exports.run = (client, message) => {
   
   .addField(
       `**:boom:➤ Bağlantılar  **`,
-      `>  » [Destek Sunucusu](https://discord.gg/74MZyfZ24d) \n >  » > » [Botun Davet Linki](https://discord.com/api/oauth2/authorize?client_id=791609110658547782&permissions=8&scope=bot)`
+      `>  » [Destek Sunucusu](https://discord.gg/74MZyfZ24d) \n >  » [Botun Davet Linki](https://discord.com/api/oauth2/authorize?client_id=791609110658547782&permissions=8&scope=bot)`
     )
     .setFooter(
       `
