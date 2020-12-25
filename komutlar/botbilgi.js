@@ -1,34 +1,66 @@
-const  Discord = require("discord.js"); 
-const client = new Discord.Client();
-const moment = require("moment");
+const codework3 = require("discord.js");
+const codework = require("moment");
+const codework2 = require("os");
 require("moment-duration-format");
 
-module.exports.run = async(client, message, args) => {
-  const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
+exports.run = async (client, message, args) => {
+  const CodeWork = new codework3.MessageEmbed()
+    .setColor("BLACK")
+    .setFooter(`Clyx © | Tüm hakları saklıdır.`)
+    .addField(
+      " **Bellek kullanımı**",
+      (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB",
+      true
+    )
+    .addField(
+      " **Botun Kuruluş Tarihi**",
+      "21.09.2020"
+    )
+    .addField(
+      " **Çalışma süresi**",
+      codework
+        .duration(client.uptime)
+        .format(" D [gün], H [saat], m [dakika], s [saniye]")
+    )
+    .addField(
+      "**Kullanıcılar**",
+      client.guilds.cache
+        .reduce((a, b) => a + b.memberCount, 0)
+        .toLocaleString(),
+      true
+    )
+    .addField(
+      " **Sunucular**",
+      client.guilds.cache.size.toLocaleString(),
+      true
+    )
+    .addField(
+      " **Kanallar**",
+      client.channels.cache.size.toLocaleString(),
+      true
+    )
+    .addField("**Discord.JS sürüm**", "v" + codework3.version, true)
+    .addField(" **Node.JS sürüm**", `${process.version}`, true)
+    .addField("**Ping**", client.ws.ping + " ms", true)
+    .addField(
+      "**CPU**",
+      `\`\`\`md\n${codework2.cpus().map((i) => `${i.model}`)[0]}\`\`\``
+    )
+    .addField(" **Bit**", `\`${codework2.arch()}\``, true)
+    .addField(" **İşletim Sistemi**", `\`\`${codework2.platform()}\`\``)
 
-    const embed = new Discord.MessageEmbed()
-    .setColor('RANDOM')
-    .setTitle(' ➤İstatistik;')
-    .addField(' ➤Gecikme: ', client.ws.ping + 'ms')
-    .addField(' ➤Çalışma Süresi: ', `${duration}`)
-    .addField(' ➤Kullanıcılar:', client.users.cache.size)
-    .addField(' ➤Kanallar:', client.channels.cache.size)
-    .addField(' ➤Sunucular:', client.guilds.cache.size)
-    .addField(' ➤Bellek kullanımı:', (process.memoryUsage().heapUsed / 2048 / 2048).toFixed(2))
-    .addField(' ➤Kütüphanesi;', `Discord.js`)
-    .addField(` Discord.js sürümü:`, Discord.version)
-    .setTimestamp()
-    message.channel.send(embed);
-}
+    
+  return message.channel.send(CodeWork);
+};
 exports.conf = {
   enabled: true,
-    guildOnly: true,
-  aliases: ['istatistik', 'botbilgi', 'bot-bilgi','i'],
+  guildOnly: false,
+  aliases: ["istatistik"],
   permLevel: 0
 };
-
 exports.help = {
-  name: 'bilgi-bot',
-  description: 'İstediğiniz şeyi bota yazdırır.',
-  usage: 'istatistik [bot durumunu yazar]'
+  name: 'istatistik',
+  
+  description: 'CodeWork V12 istatistik',
+  usage: 'istatistik'
 };
