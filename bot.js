@@ -157,7 +157,7 @@ client.on("messageUpdate", msg => {
     if (i) {
         const kufur = ["oç", 
                        "amk", 
-                       "ananı sik iyim",
+                       "ananı sikiyim",
                        "piç",
                        "orospu çocuğu",
                        "orospu",
