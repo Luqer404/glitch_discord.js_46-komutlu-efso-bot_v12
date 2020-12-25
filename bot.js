@@ -204,13 +204,3 @@ client.on("message", async msg => {
 client.login(ayarlar.token)
 
 
-client.on("guildMemberAdd", async member => {
-  let rol = db.fetch(`otorol_${member.guild.id}`)
-  let kanal = db.fetch(`otorollog_${member.guild.id}`)
-//////////////////çalıcaksan bare mesajı değiştir amk
-if (!rol) return;
-
-member.roles.add(rol)
-/////////////yapan lexac
-client.channels.cache.get(kanal).send(`Sunucuya ${member} Adlı Kullanıcı Katıldı. Otomatik Olarak Rolü Verildi!`)
-})

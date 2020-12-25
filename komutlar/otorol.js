@@ -1,34 +1,29 @@
-const discord = require('discord.js')
-const db = require('quick.db')
+const Discord = require('discord.js');
+const db = require('quick.db');
 
-exports.run = async(client, message, args) => {
-//////////////////////////made by lexac
-if (args[0] === 'sıfırla') {
-let otorol = db.fetch(`otorol_${message.guild.id}`)
-if (!otorol) return message.channel.send(`Otorol Ayarlanmadığı İçin Sıfırlanamaz!`)
-message.channel.send(`Otorol Başarıyla Sıfırlandı!`)
-  db.delete(`otorollog_${message.guild.id}`)
-  db.delete(`otorol_${message.guild.id}`)
-  return;
-}
-////////////çalan sikilir
-let rol = message.mentions.roles.first()
-if(!rol) return message.channel.send(`Sunucuya Gelenlere Verilecek Rolü Belirtmeyi Unuttun!`)
-
-let kanal = message.mentions.channels.first()
-if (!kanal) return message.channel.send(`Otorol Logunu AYarlamayı Unuttun!`)
-
-db.set(`otorol_${message.guild.id}`, rol.id)
-db.set(`otorollog_${message.guild.id}`, kanal.id)
-
-message.channel.send(`Otorol Başarıyla Ayarlandı ! `)  
+exports.run = async (client, message, args) => {
+  
+  let rol = message.mentions.roles.first();
+  if (!rol) return message.reply('Otorol için bir rol etiketlemelisiniz!')
+  
+  db.set(`otoR_${message.guild.id}`, rol.id)
+  
+  const emb = new Discord.RichEmbed()
+  .setAuthor(client.user.username, client.user.displayAvatarURL)
+  .setDescription(`Otorol Rol'ü başarıyla ${rol} olarak ayarlandı!`)
+  .setColor("RANDOM")
+  .setTimestamp()
+  message.channel.send(emb)
 }
 exports.conf = {
-  name: true,
-  guildonly: false,
-  aliases: ['oto-rol'],
-  permlevel: 0
+  enabled: true,
+  guildOnly: false,
+  aliases: ['otorol-ayarla','oto-rol-ayarla'],
+  permLevel: 2,
+  kategori: "ayar"
 }
 exports.help = {
-  name: 'otorol'
-}/////
+  name: 'otorol',
+  description: 'Sunucuya özel otorol ayarlar.',
+  usage: 'otorol'
+}
