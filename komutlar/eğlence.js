@@ -9,7 +9,7 @@ const eğlence = new Discord.MessageEmbed()
 .setAuthor("Mays v12 sürümüyle sizlerle")
 .setTitle(" ➤Mays Eğlence komutları" )
  .setTimestamp()
-.setDescription(" **m!tersyazı** = Bir Yazıyı Bot Ters Yazar. < \n  **m!mcskin** = Yazdığınız ismin minecraft görünüşünü atar.  \n  **m!fbi** = Bot FBi Gif Atar. \n **m!token** = Tokenimi Öğrenmek İstemezmisin?  \n  **m!düello** = Düello Atarsın.  \n  **m!wasted** = Polis tarafından yakalanırsın.  \n  **m!atatürk** = Dene ve gör... (1881-1938) ")
+.setDescription(" **m!tersyazı** = Bir Yazıyı Bot Ters Yazar. < \n  **m!mcskin** = Yazdığınız ismin minecraft görünüşünü atar.  \n  **m!fbi** = Bot FBi Gif Atar. \n **m!token** = Tokenimi Öğrenmek İstemezmisin?  \n  **m!düello** = Düello Atarsın.  \n  **m!wasted** = Polis tarafından yakalanırsın.  \n  **m!atatürk** = Dene ve gör... (1881-1938) \n m!ara155 = Polisi Arar \n m!zar-at = zar atar")
 .setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
 message.channel.send(eğlence)
 }
