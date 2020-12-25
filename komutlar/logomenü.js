@@ -9,7 +9,7 @@ const eğlence = new Discord.MessageEmbed()
 .setAuthor(" Mays v12 sürümüyle sizlerle")
 .setTitle(" ➤Mays logo menüsü komutları" )
  .setTimestamp()
-.setDescription("**m!alev** \n **m!altın** \n **m!anime** \n **m!arrow** \n **m!banner**  \n **m!basit** \n **m!dinamik** \n **m!elmas** \n **m!greenlogo** \n  **m!habbo**m \n **m!kalın** \n **m!kırmızı** \n **m!neonmavi** \n **m!sarı** \n ")
+.setDescription("**m!alev** \n **m!altın** \n **m!anime** \n **m!arrow** \n **m!banner**  \n **m!basit** \n **m!dinamik** \n **m!elmas** \n **m!greenlogo** \n  **m!habbo** \n **m!kalın** \n **m!kırmızı** \n **m!neonmavi** \n **m!sarı** \n ")
 .setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
 message.channel.send(eğlence)
 }
