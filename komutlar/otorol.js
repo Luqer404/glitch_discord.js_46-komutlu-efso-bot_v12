@@ -31,4 +31,4 @@ exports.conf = {
 }
 exports.help = {
   name: 'otorol'
-}/////////////code by lexac
+}/////
