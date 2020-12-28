@@ -34,7 +34,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "is",
-  description: "is",
-  usage: "is"
+  name: "botbilgi",
+  description: "botbilgi",
+  usage: "botbilgi"
 };
