@@ -18,7 +18,7 @@ exports.run = (client, message) => {
 :white_small_square: | **m!eğlence:** Eğlence Menüsüne Bakarsınız.
 :white_small_square: | **m!moderasyon:** Botun Moderasyon Komutlarına Bakarsınız
 :white_small_square: | **m!logomenü:** Botun Logo YAPMA Komutlarına Bakarsınız.
-:white_small_square: | **m!website:** Botumun Web Sİtesine Ulaşanilirsiniz.  
+:white_small_square: | **m!website:** Botumun Web Sİtesine Ulaşabilirsiniz.  
 
 `)
 
