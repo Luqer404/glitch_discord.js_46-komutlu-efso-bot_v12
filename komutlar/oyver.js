@@ -4,9 +4,9 @@ exports.run = (client, message, args) => {
 
   const davet = new Discord.MessageEmbed()
   .setColor("RANDOM")
-  .setTitle("Burdan Websitemize Ulaşabilirsiniz ")
-  .setDescription("[__**WebSite**__](https://maysbott.wixsite.com/website)")
-  .setFooter('Websitemizi Ziyaret ettiğin için teşekkürler..')
+  .setTitle("Bana Oyver ")
+  .setDescription("[__**Botlist**__](https://top.gg/bot/791609110658547782/vote)")
+  .setFooter('Botumuza Oy Verdiğiniz İçin Şimdiden Teşekkür Ederim..')
   message.channel.send(davet)
 }
 
@@ -19,7 +19,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'website',
+  name: 'oyver',
   description: '',
   usage: ''
 };
