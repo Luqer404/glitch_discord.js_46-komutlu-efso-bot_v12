@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
     .addField("**__Bot Sahibi__**", `Murat Eren#4841`, true)
     .addField("**__Geliştirici__**", ` Murat Eren#4841`, true)
     .addField("**__İşletim Sistemi__**", ` \`Windows 10 | 64 Bit\` `, true)
-    .addField("**__CPU__**",` \`\`\`Intel(R) Xeon(R) CPU @ 2.30GHz\`\`\` `)
+    .addField("**__CPU__**",` \`\`\`Intel Xeon W-3275M\`\`\` `)
 
   return message.channel.send(istatistikler);
 };

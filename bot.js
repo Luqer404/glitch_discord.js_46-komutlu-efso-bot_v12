@@ -5,11 +5,11 @@ const db = require('quick.db')
 const moment = require("moment");
 const ayarlar=require("./ayarlar.json");
 const express = require('express');
-/////
+
 const app = express()
 app.get('/', (req, res) => res.send("Bot Aktif"))
 app.listen(process.env.PORT, () => console.log('Port ayarlandı: ' + process.env.PORT))
-//////////////////
+
 
 
 
