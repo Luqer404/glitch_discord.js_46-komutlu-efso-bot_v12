@@ -16,7 +16,7 @@ exports.conf = {
   aliases: [],
   permLevel: 0
 };
-//KobsCode
+//
 exports.help = {
   name: 'atatürk',
   description: '',

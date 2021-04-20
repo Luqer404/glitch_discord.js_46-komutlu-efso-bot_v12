@@ -12,7 +12,7 @@ exports.run = function(client, message, args) {
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription(`Afk Olmak İçin Bir Sebep Belirtin.\n\n Örnek Kullanım : ${prefix}afk <sebep>`)
   if(!REASON) return message.channel.send(embed)
- //lrowsxrd
+ 
   db.set(`afk_${USER.id}`, REASON);
   db.set(`afk_süre_${USER.id}`, Date.now());
   const afk = new Discord.MessageEmbed()

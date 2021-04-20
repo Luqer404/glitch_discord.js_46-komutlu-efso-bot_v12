@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = async (client, message, args) => {// LeXac#7557
+exports.run = async (client, message, args) => {// 
 
 message.channel.send('Bekle..').then(a => {
 var zar1 = ['1', '2', '3', '4', '5', '6'];
