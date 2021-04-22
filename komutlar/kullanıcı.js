@@ -9,7 +9,7 @@ const kullanıcı = new Discord.MessageEmbed()
 .setAuthor("Mays bot ")
 .setTitle(" ➤Mays Bot Kullanıcı Komutları ")
  .setTimestamp()
-.setDescription(" **m!avatar** = Avatarınıza bakarsınız.  \n  **m!yetkilerim** = Yetkilerini görürsün. \n  **m!profil** = Profilini görürsün.  \n **m!sunucuresmi** = Sunucu resmini gösterir.  \n  **m!ping** = Botun Pingine Bakarsın. \n **m!id** = Birisinin id'sine Bakarsın. \n  **m!davet** = Beni Sunucuna Ekle.  \n  **m!botbilgi** = Bot istatistiklerini görürsünüz. \n  **m!bug-bildir** = Yazdığınız bug'u yapımcılarıma bildirir. ")
+.setDescription(" **m!avatar** = Avatarınıza bakarsınız.  \n  **m!yetkilerim** = Yetkilerini görürsün. \n  **m!profil** = Profilini görürsün.  \n **m!sunucuresmi** = Sunucu resmini gösterir.  \n  **m!ping** = Botun Pingine Bakarsın. \n **m!id** = Birisinin id'sine Bakarsın. \n  **m!davet** = Beni Sunucuna Ekle.  \n  **m!botbilgi** = Bot istatistiklerini görürsünüz.  ")
 .setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
 message.channel.send(kullanıcı)
 }
