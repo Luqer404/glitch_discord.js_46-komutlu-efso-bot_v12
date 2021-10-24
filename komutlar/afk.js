@@ -1,6 +1,6 @@
 const db = require("quick.db");
 const Discord = require("discord.js");
-const ayarlar = require('../ayarlar.json')
+const ayarlar = require('../ayarlar.js')
 let prefix = ayarlar.prefix
  
 exports.run = function(client, message, args) {

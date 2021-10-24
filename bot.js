@@ -3,8 +3,9 @@ const Discord=require("discord.js");
 const client=new Discord.Client();
 const db = require('quick.db')
 const moment = require("moment");
-const ayarlar=require("./ayarlar.json");
+const ayarlar=require("./ayarlar.js");
 const express = require('express');
+client.ayarlar = ayarlar
 
 const app = express()
 app.get('/', (req, res) => res.send("Bot Aktif"))
@@ -201,7 +202,29 @@ client.on("message", async msg => {
  
     });
 
-client.login(ayarlar.token)
 
 
+let cstoken;
+
+if (ayarlar.TOKEN) {
+
+  cstoken = ayarlar.TOKEN;
+
+}
+
+if (process.env.TOKEN) {
+
+  cstoken = process.env.TOKEN;
+
+}
+
+if (cstoken) {
+
+  client.login(cstoken);
+
+} else {
+
+  console.log("Projeye Hiç Bir Bot Tokeni Yazılmamış!");
+
+}
 
