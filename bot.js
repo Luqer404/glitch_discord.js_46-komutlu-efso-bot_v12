@@ -208,7 +208,30 @@ client.on("message", async msg => {
  
     });
 
+client.on('guildMemberAdd', member => {
+  let sistem = db.fetch(`otorol_${member.guild.id}`)
 
+  // Eğer Sistem Açıksa Kod Döndürelim
+  if(sistem === 'acik'){
+    // Data Veri Çekme İşlemi
+    let rol = db.fetch(`orol_${member.guild.id}`)
+    let kanal = db.fetch(`okanal_${member.guild.id}`)
+    let mesaj = db.fetch(`omesaj_${member.guild.id}`)
+
+    // Rol Verme
+    member.roles.add(rol)
+
+    // Mesaj
+    client.channels.cache.get(kanal).send(
+      new Discord.MessageEmbed()
+      .setDescription(`${mesaj}`)
+      .setColor('BLACK')
+    )
+  } else if(sistem != "acik") {
+    // Eğer Sistem Kapalıysa...
+    return;
+  }
+})
 let cstoken;
 
 if (ayarlar.TOKEN) {
