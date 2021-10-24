@@ -36,8 +36,14 @@ client.on("message", message => {
 
 client.on("ready", () => {
   console.log(`Bütün komutlar başarıyla yüklendi!`);
-  client.user.setStatus("dnd");
-  client.user.setActivity(ayarlar.durum);
+  client.user.setStatus(ayarlar.durum);client.user.setActivity({
+   name :ayarlar.oynuyor + ` | ` + `${ayarlar.prefix}yardım` ,
+   type :"PLAYING"})
+  //Botun Durumu
+  //online=Çevrimiçi
+  //idle=Boşta
+  //dnd=Rahatsız Etmeyin
+  //invisible=Görünmez
 })
 
 

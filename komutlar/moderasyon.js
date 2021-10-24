@@ -8,8 +8,7 @@ const eğlence = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("Moderasyon komutları" )
  .setTimestamp()
-.setDescription(` **${p}ping** : Botun pingini gösterir \n **${p}id** \n **${p}küfür**  \n **${p}sa-as** \n **${p}kick** \n **${p}sunucubilgi** \n **${p}sil** \n **${p}profil** \n **${p}token** \n **${p}yetkilerim** \n **{$p}link** \n   **${p}afk** `)
-.setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
+.setDescription(` **${p}ping** : Botun pingini gösterir \n **${p}id** \n **${p}küfür**  \n **${p}sa-as** \n **${p}kick** \n **${p}sunucubilgi** \n **${p}sil** \n **${p}profil** \n **${p}token** \n **${p}yetkilerim** \n **${p}link** \n   **${p}afk** `)
 message.channel.send(eğlence)
 }
 

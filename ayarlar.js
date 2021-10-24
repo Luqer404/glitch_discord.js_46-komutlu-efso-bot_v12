@@ -4,9 +4,24 @@ const ayarlar = {
 
   sahip: "806259084483100703",
 
-  prefix: "_",
-  durum : "<3"
- 
+  prefix: "+",
+  
+  //client.user.setActivity
+  oynuyor : "<3",
+  oynuyortipi : "STREAMING",
+  //STREAMING = yayında
+  //PLAYING = oynuyor
+ //WATCHING = izliyor
+  
+  
+  
+  //client.user.setStatus
+  durum :"dnd"
+  //Botun Durumu
+  //online=Çevrimiçi
+  //idle=Boşta
+  //dnd=Rahatsız Etmeyin
+  //invisible=Görünmez
 };
 
 module.exports = ayarlar;
