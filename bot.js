@@ -1,8 +1,7 @@
 const fs=require('fs');
 const Discord=require("discord.js");
 const client=new Discord.Client();
-const qdb = require('quick.db')
-
+const db = require('quick.db')
 const moment = require("moment");
 const ayarlar=require("./ayarlar.js");
 const express = require('express');
@@ -140,7 +139,7 @@ client.yetkiler = message => {
 client.on("message", async msg => {
     if(msg.author.bot) return;
     
-    let i = await qdb.fetch(`reklamFiltre_${msg.guild.id}`)  
+    let i = await db.fetch(`reklamFiltre_${msg.guild.id}`)  
           if (i == 'acik') {
               const reklam = ["https://","http://","discord.gg"];
               if (reklam.some(word => msg.content.toLowerCase().includes(word))) {
@@ -161,7 +160,7 @@ client.on("message", async msg => {
 client.on("messageUpdate", msg => {
  
  
- const i = qdb.fetch(`${msg.guild.id}.kufur`)
+ const i = db.fetch(`${msg.guild.id}.kufur`)
     if (i) {
         const kufur = ["oç", 
                        "amk", 
@@ -190,7 +189,7 @@ client.on("messageUpdate", msg => {
 client.on("message", async msg => {
  
  
-  const i = await qdb.fetch(`ssaass_${msg.guild.id}`);
+  const i = await db.fetch(`ssaass_${msg.guild.id}`);
     if (i == 'acik') {
       if (msg.content.toLowerCase() == 'sa' || msg.content.toLowerCase() == 's.a' || msg.content.toLowerCase() == 'selamun aleyküm' || msg.content.toLowerCase() == 'sea'|| msg.content.toLowerCase() == 'selam') {
           try {
@@ -205,14 +204,12 @@ client.on("message", async msg => {
     else if (i == 'kapali') {
    
     }
-    if (!i) return; 
-    });lcük.id)
+    if (!i) return;
+ 
+    });
 
-}) 
 
-const qdb = require('quick.db'); 
 
-Bu tanımlamayı yapmayı unutmayın!
 let cstoken;
 
 if (ayarlar.TOKEN) {
