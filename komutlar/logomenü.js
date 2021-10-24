@@ -10,8 +10,7 @@ const eğlence = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setTitle("logo menüsü komutları" )
  .setTimestamp()
-.setDescription(" **${p}altın** \n **${p}anime** \n **${p}arrow** \n **${p}banner**   \n **${p}green** \n  **${p}habbo** \n **m!kalın** \n  **m!neonmavi** \ ")
-.setImage("https://cdn.discordapp.com/attachments/790999702765961258/791798016583008297/wp2490739.png")
+.setDescription(` **${p}altın** \n **${p}anime** \n **${p}arrow** \n **${p}banner**   \n **${p}green** \n  **${p}habbo** \n **${p}kalın** \n  **${p}neonmavi** \ `)
 message.channel.send(eğlence)
 }
 
