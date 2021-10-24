@@ -26,4 +26,4 @@ exports.help = {
     name: 'green',
     description: 'Yazdığınız yazıyı bannera çevirir.',
     usage: 'green <yazı>'
-}
+} 
