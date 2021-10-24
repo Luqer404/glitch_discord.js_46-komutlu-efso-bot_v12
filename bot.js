@@ -209,7 +209,6 @@ client.on("message", async msg => {
     });
 
 
-
 let cstoken;
 
 if (ayarlar.TOKEN) {
