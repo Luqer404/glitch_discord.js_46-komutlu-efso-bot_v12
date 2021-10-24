@@ -2,10 +2,11 @@ const ayarlar = {
 
   TOKEN: "", // ASSAGIYI OKU
 
-  sahip: "",
+  sahip: "806259084483100703",
 
-  prefix: ""
-
+  prefix: "_",
+  durum : "<3"
+ 
 };
 
 module.exports = ayarlar;

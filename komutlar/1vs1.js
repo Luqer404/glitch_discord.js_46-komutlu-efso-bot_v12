@@ -6,11 +6,11 @@ exports.run = async (client, message, args) => {
   this.fighting = new Set();
   
 	let opponent = message.mentions.users.first()
-	if (!opponent) return message.reply("<a:by:752306236606906399> Oynamak istediğin kişiyi etiketlemelisin!")
+	if (!opponent) return message.reply("Oynamak istediğin kişiyi etiketlemelisin!")
   
-  if (opponent.bot) return message.reply('<a:by:752306236606906399> Botlar ile oynayamazsın!');
-  if (opponent.id === message.author.id) return message.reply('<a:by:752306236606906399> Kendin ile düello Atamazsın');
-		if (this.fighting.has(message.channel.id)) return message.reply('<a:by:752306236606906399> Kanal başına sadece bir düello meydana gelebilir.');
+  if (opponent.bot) return message.reply('Botlar ile oynayamazsın!');
+  if (opponent.id === message.author.id) return message.reply('Kendin ile düello Atamazsın');
+		if (this.fighting.has(message.channel.id)) return message.reply('Kanal başına sadece bir düello meydana gelebilir.');
 		this.fighting.add(message.channel.id);
 		try {
 			if (!opponent.bot) {
@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
 				const verification = await verify(message.channel, opponent);
 				if (!verification) {
 					this.fighting.delete(message.channel.id);
-					return message.channel.send(`<a:by:752306236606906399> Düello kabul edilmedi...`);
+					return message.channel.send(`:x: Düello kabul edilmedi...`);
 				}
 			}
 			let userHP = 500;
@@ -53,7 +53,7 @@ exports.run = async (client, message, args) => {
 						time: 30000
 					});
 					if (!turn.size) {
-						await message.reply(`<a:by:752306236606906399> Üzgünüm ama, süre doldu!`);
+						await message.reply(`Üzgünüm ama, süre doldu!`);
 						reset();
 						continue;
 					}
@@ -86,7 +86,7 @@ exports.run = async (client, message, args) => {
 					forfeit();
 					break;
 				} else {
-					await message.reply('<a:by:752306236606906399> Ne yapmak istediğini anlamadım.');
+					await message.reply('Ne yapmak istediğini anlamadım.');
 				}
 			}
 			this.fighting.delete(message.channel.id);
